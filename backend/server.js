@@ -6,6 +6,11 @@ dotenv.config({ path: "./config/config.env" });
 
 dbConnection(); 
 
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
+
 app.listen(process.env.PORT, () => {
     console.log(`Server is working on port ${process.env.PORT}`);
 });
